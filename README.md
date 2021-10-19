@@ -6,3 +6,5 @@
 * In order to run this program in your machine just install the dependencies like opencv, mediapipe, pynput and run the main.py file
 * after that stand in front of the camera in center position
 * Thats it you are good to go now
+
+<img src = "https://github.com/BadagalaAdarsh/Super_Mario/blob/main/super_mario_gif.gif">
