@@ -47,13 +47,13 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence= 0.5) as
             right_threshold = 575
             top_threshold = 420
 
-            # # if x co-ordinate passes left threshold move left
+            # # if x coordinate passes left threshold move left
             if int(mid_point_of_shoulder[0]) < int(left_threshold):
                 t1 = threading.Thread(target=move_left)
                 t1.start()
                 #print("left")
 
-            # # if x co-ordinate passes right threshold move right
+            # # if x coordinate passes right threshold move right
             if int(mid_point_of_shoulder[0]) > int(right_threshold):
                 # for i in range(400):
                 #     move_right() 
@@ -61,7 +61,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence= 0.5) as
                 t2.start()               
                 
 
-            # # if y co-ordinate passes aboe the top threshold move up
+            # # if y coordinate passes aboe the top threshold move up
             if int(mid_point_of_shoulder[1]) < int(top_threshold):
                 jump()
                 #print("jump")
@@ -76,7 +76,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence= 0.5) as
             do_nothing()
 
         # rendering the detections
-        # to show the acutal lines on the body
+        # to show the actual lines on the body
         # mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS,
         #                                   mp_drawing.DrawingSpec(color=(245, 117, 66), thickness=2, circle_radius=2),
         #                                   mp_drawing.DrawingSpec(color=(245, 66, 230), thickness=2, circle_radius=2)
